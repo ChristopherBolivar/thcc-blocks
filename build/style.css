@@ -1,0 +1,306 @@
+:root {
+	--thccYellow: #ffcc01;
+	--blockFontSie: 56px;
+  }
+.thcc-ripped-paper-block {
+    background: #ccc;
+    overflow: hidden;
+    position: relative;
+}
+.thcc-ripped-paper-block-wrapper {
+    background-size: cover;
+    background-position: center;
+}
+.bottom-rip:after{
+	content:" ";
+	display:block;
+	height: 45px;
+	background-image:url('/wp-content/uploads/2022/07/torn-border2.png');
+	position:absolute;
+	bottom:0;
+   	width:300%;
+    left:-500px;    
+}
+.top-rip:before{
+	content:" ";
+	display:block;
+	width:300%;
+	height: 65px;
+	background-image:url('/wp-content/uploads/2022/07/torn-border2upside.png');
+	position:absolute;
+	left:-500px;
+	z-index:1;
+	top: 0;
+}
+.components-button.thcc-logo__button.has-icon {
+	position: absolute;
+	top: 10px;
+	left:10px;
+	background: rgba(255,255,255,.5);
+	transition: all .2s ease-in-out;
+	z-index: 100;
+}
+.components-button.thcc-logo__button.has-icon:hover {
+
+	background: rgba(255,255,255,1);
+}
+.turbulence {
+    filter: url(#turbulence);
+}
+
+.displacement-map {
+    filter: url(#displacement);
+}
+
+.thcc-combined {
+    filter: url(#combined);
+	display: inline-block;
+	padding: .5rem 2rem;
+}
+.is-style-black .thcc-combined {
+	background-color: #000;
+}
+.is-style-black .thcc-block-paragraph-text, .is-style-black .thcc-block-headline-text  {
+	color: #fff !important;
+}
+.is-style-yellow .thcc-combined {
+	background-color: var(--thccYellow);
+	
+}
+.is-style-yellow .thcc-combined, thccbtn {
+transition: all .2s ease-in-out;
+}
+.is-style-yellow  .thcc-block-paragraph-text,.is-style-yellow  .thcc-block-headline-text{
+	color: #000 !important;
+}
+.thcc-block-headline-wrapper,.thcc-block-paragraph-wrapper {
+	position: relative;
+	display: inline-block;
+}
+.thcc-combined .thcc-dummy-headline {
+	margin: 0;
+	opacity: 0;
+}
+.thcc-block-headline {
+	position: absolute;
+	top: 12%;
+	margin: 0 2rem;
+}
+.thcc-block-headline-text p {
+	margin: 0 auto;
+}
+.thcc-block-headline-text {
+	font-size: 3.5rem;
+}
+.thcc-headline-block, .thcc-paragraph-block {
+	margin: 1rem 0;
+}
+
+.aligncenter {
+	display: flex !important;
+}
+.aligncenter .thcc-block-headline-wrapper{
+	margin: 0 auto;
+	text-align: center;
+}
+
+.thcc-ripped-paper-block-wrapper .wp-block-columns {
+   height: 100%;
+}
+.thcc-topic-list {
+	margin: .5rem 0 .5rem 0;
+}
+.episode-topic-list {
+	margin: 0;
+}
+.thcc-topic-list a {
+    text-decoration: underline !important;
+	font-size: 1.2rem;
+	transition: .2s all ease-in-out;
+}
+.thcc-topic-list:hover a {
+	color: var(--thccYellow) !important;
+}
+.thcc-episode-thumbnail {
+	max-width: 350px;
+}
+.thcc-episode-thumbnail img {
+	width: 100%;
+}
+.wp-block-column .thcc-episodes-wrapper:nth-child(odd) {
+    background-color: #f8f8f8
+}
+.thcc-episodes-wrapper {
+	display: flex;
+	justify-content: space-around;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+.thcc-episodes-wrapper div {
+	padding: .5rem;
+}
+.thcc-episode-thumbnail {
+	width: 40%;
+}
+.thcc-episode-thumbnail img {
+    padding-right: 2rem;
+}
+.thcc-episode-info {
+	width: 60%;
+} 
+.thcc-episode-thumbnail, .thcc-episode-info  {
+display: flex;
+justify-content: center;
+}
+.thcc-episode-info-inner, .thcc-episode-thumbnail-inner {
+	margin: auto;
+  }
+.thcc-episode-info {
+    border-left: 2px solid #000;
+}
+.thcc-episode-info h1 {
+	font-size: 200%;
+	line-height: 1.1;
+    padding-left: 1rem;
+    margin:0;
+}
+.thcc-episode-info p {
+	font-size: 80%;
+	line-height: 1.5;
+    margin: .5rem 0;
+    padding-left: 1rem;
+    padding-right: 3rem;
+}
+
+.thcc-episode-info-btn {
+	color: #000;
+	border: 2px solid #000;
+	padding: .5rem;
+	display: inline-block;
+	margin: .5rem 0 0 1rem;
+	transition: .2s ease-in-out;
+	cursor: pointer;
+	border-radius: 10px;
+	text-decoration:  none;
+} 
+.thcc-episode-info-btn h5 {
+	margin: 0;
+	font-size: 1.2rem;
+}
+.thcc-episode-info-btn:hover  {
+	background: var(--thccYellow);
+}
+
+.thcc-block-headline-text i {
+	display: inline;
+}
+.wp-block-column {
+	word-break: normal;
+	overflow-wrap: normal;
+  }
+
+  .sub-box {
+	display: flex;
+	flex-direction: column;
+	background: #f8f8f8;
+	border-radius: 25px;
+	border: 2px solid #000;
+	padding-bottom: .5rem;
+  }
+  .sub-box .thcc-block {
+	margin: .5rem auto;
+  }
+  .sub-box h2 {
+	margin: .5rem auto 0 auto;
+  }
+.about-text {
+	width: 60%;
+	margin: 0 auto;
+}
+.about-text {
+	width: 60%;
+	margin: 0 auto;
+}
+
+
+  @media only screen and (max-width: 1024px) {
+
+	.thcc-block-headline-text {
+		font-size: 250%;
+	  }
+	  .menu li {
+		font-size: 150%;
+	  }
+	  .thcc-episode-info , .thcc-episode-thumbnail {
+		width: 50%;
+	  }
+	  .main-column-wrapper {
+		flex-direction: column-reverse;
+	  }
+	  .topics-headline {
+		text-align: center;
+	  }
+	  .thcc-topic-list {
+		width: 33%;
+		padding: 0 1.5rem;
+		list-style: none;
+		padding:0;
+	  }
+	  .episode-topic-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 auto;
+		display: flex;
+		padding: 0 0 0 2rem;
+	  }
+	  
+
+  }
+
+  @media only screen and (max-width: 600px) {
+	
+	.thcc-topic-list {
+		width: 45%;
+	  }
+	  .episode-topic-list {
+		justify-content: space-between;
+	  }
+	  .thcc-topic-list a {
+		font-size: .9rem;
+	  }
+	  .episode-topic-list {
+		padding: 0 .5rem 0 .5rem;
+	  }
+	  .thcc-episodes-wrapper {
+		flex-direction: column;
+	  }
+	  .thcc-episode-info, .thcc-episode-thumbnail {
+		width: 100%;
+	  }
+	  .thcc-episode-info {
+		border-left: none;
+	  }
+	  .thcc-episode-info h1 {
+		font-size: 1.8rem;
+		padding-left: 0;
+		margin: 0;
+	  }
+	  .thcc-episode-info-inner {
+		width: 90%;
+		margin-left: 0 !important;
+	  }
+	  .thcc-episode-info p {
+		padding: 0;
+	  }
+	  .thcc-episodes-wrapper {
+		margin:  1rem 0 0 0;
+		padding: 0;
+	  }
+	  .thcc-episode-info-btn {
+		margin: .5rem 0;
+	  }
+	  .thcc-episodes-wrapper div {
+		padding: 0;
+	  }
+	 
+  }
